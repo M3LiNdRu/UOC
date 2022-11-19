@@ -1,0 +1,3 @@
+<button (click)="signIn()">Linkedin SSO</button>
+<button *ngIf="code" (click)="requestAccessToken()">Request Access Token</button>
+<button *ngIf="access_token" (click)="requestPersonalInfo()">Request Personal Info</button>
