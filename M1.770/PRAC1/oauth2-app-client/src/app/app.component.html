@@ -1,0 +1,18 @@
+<button (click)="signInWithPKCE()">Linkedin SSO for Public Clients</button>
+<button *ngIf="code && pkce" (click)="requestAccessTokenWithPKCE()">Request Access Token</button>
+<br/>
+<br/>
+<button (click)="signIn()">Linkedin SSO</button>
+<button *ngIf="code && !pkce" (click)="requestAccessToken()">Request Access Token</button>
+<br />
+<textarea *ngIf="access_token" [(ngModel)]="access_token" rows="5" cols="120" ></textarea>
+<button *ngIf="access_token" (click)="requestPersonalInfo()">Request Personal Info</button>
+<br/>
+
+<div *ngIf="author && access_token" >
+    <hr/>
+    <span>Post messages as {{authorFullName}}</span>
+    <textarea [(ngModel)]="message" rows="30" cols="120" placeholder="Type your message here..."></textarea>
+    <button (click)="shareMessage()">Share a message!</button>
+    <span *ngIf="message_id" style="color: green;">Your message has been posted with id: {{message_id}}</span>
+</div>

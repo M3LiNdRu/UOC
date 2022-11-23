@@ -1,0 +1,21 @@
+{
+    "/oauth/v2/accessToken": {
+      "target": "http://localhost:3000",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": { "^/api": "" },
+      "logLevel": "debug"
+    },
+    "/api/v2/me": {
+        "target": "http://localhost:3000",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": { "^/api": "" }
+      },
+    "/api/v2/ugcPosts": {
+      "target": "http://localhost:3000",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": { "^/api": "" }
+    }
+}
