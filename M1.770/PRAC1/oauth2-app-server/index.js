@@ -9,8 +9,6 @@ const headers = {
 }
 const loglevel = "debug"
 
-app.use(express.json());
-
 
 app.use('/api/v2/me', createProxyMiddleware({
   target: "https://api.linkedin.com",
@@ -30,6 +28,7 @@ app.use('/api/v2/ugcPosts', createProxyMiddleware({
   logLevel: loglevel
 }))
 
+app.use('/oauth/v2/accessToken', express.json())
 app.use('/oauth/v2/accessToken', function(req, res){
   request.post(
     {
