@@ -1,13 +1,13 @@
 services:
 
   oauth-client:
+    container_name: oauth-client
     build: oauth2-app-client/
     ports: 
       - 4200:4200
-    extra_hosts:
-      - "oauth-server:127.0.0.1"
-  
+
   oauth-server:
+    container_name: oauth-server
     build: oauth2-app-server/
     ports: 
       - 3000:3000
