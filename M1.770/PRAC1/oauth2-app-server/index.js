@@ -12,7 +12,7 @@ const loglevel = "debug"
 app.use(express.json());
 
 
-app.use('/v2/me', createProxyMiddleware({
+app.use('/api/v2/me', createProxyMiddleware({
   target: "https://api.linkedin.com",
   secure: true,
   changeOrigin: true,
@@ -21,7 +21,7 @@ app.use('/v2/me', createProxyMiddleware({
   logLevel: loglevel
 }))
 
-app.use('/v2/ugcPosts', createProxyMiddleware({
+app.use('/api/v2/ugcPosts', createProxyMiddleware({
   target: "https://api.linkedin.com",
   secure: true,
   changeOrigin: true,
