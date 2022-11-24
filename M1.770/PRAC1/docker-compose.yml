@@ -5,7 +5,7 @@ services:
     ports: 
       - 4200:4200
     extra_hosts:
-      - "dockerhost:127.0.0.1"
+      - "oauth-server:127.0.0.1"
   
   oauth-server:
     build: oauth2-app-server/
