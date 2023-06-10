@@ -14,8 +14,11 @@ def ortogonal_flaw(B):
     print (f"Hadamard ratio of B: {np.round(np.power((volume/modules), 0.5), 3)}")
 
 def babai(base, vector):
+    #Pas1. Escrivim w com a suma de producte de vectors i obtenim els coeficients
     x = np.linalg.solve(base.T, vector)
+    #Pas2. Arrodonim els coeficients obtinguts a l'enter mes proper
     rounded = np.round(x, 0)
+    #Pas3. Obtenim el vector resultant aplicant els coeficients x per cada coordenada.
     v = np.dot(base.T, rounded)
     print (f"Closest vector: {v}")
     return v
