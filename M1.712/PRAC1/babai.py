@@ -19,7 +19,7 @@ def ortogonal_flaw(B):
     modules = np.linalg.norm(B[0]) 
     for v in B[1:]:
         modules *= np.linalg.norm(v)  
-
+        
     print (f"Ortogonal flaw of B: {np.round(modules/volume, 3)}")
     print (f"Hadamard ratio of B: {np.round(np.power((volume/modules), 0.5), 3)}")
 
