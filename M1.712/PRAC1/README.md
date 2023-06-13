@@ -1,8 +1,9 @@
-# Babai's algorithm implementation #
+# Babai's & GGH algorithms implementations #
 
 ## Usage ##
 
-`$ py babai.py ent-1/base.txt ent-1/w.txt`
+`$ py babai.py ex3/base.txt ex3/w.txt`
+`$ py ggh.py ex4/base.txt ex4/m.txt ex4/w.txt`
 
 ## References ##
 * https://www.youtube.com/watch?v=-UrdExQW0cs

@@ -12,10 +12,9 @@ def draw(base):
     
 def main():
     print("Babai's algorithm (CVP)")
-    print(f"Loading input values: base={sys.argv[1]}, w={sys.argv[2]}")
+    print(f"Loading input values: base={sys.argv[1]}")
     base = np.loadtxt(sys.argv[1], dtype='i', delimiter=' ')
-    w = np.loadtxt(sys.argv[2], dtype='i', delimiter=' ')
-    print(f"B: {base}\nw: {w}\n")
+    print(f"B: {base}")
     draw(base)
 
 if __name__ == "__main__":
