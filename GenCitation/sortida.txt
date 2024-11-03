@@ -1,0 +1,1 @@
+PostgreSQL: Linux downloads (Ubuntu) [en línia] [consulta: 12 d'octubre del 2024] Disponible a: https://www.postgresql.org/download/linux/ubuntu/
